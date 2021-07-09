@@ -9,7 +9,7 @@ namespace MotoProto
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new SplashPage());
+            MainPage = new SplashPage();
         }
 
         protected override void OnStart()

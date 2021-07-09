@@ -29,8 +29,8 @@ namespace MotoProto.Pages
 
         void StartAnimation()
         {
-            var animation = new Animation(OnAnimationUpdate, finished: OnAnimationFinished);
-            animatedControl.Animate(AnimationName, animation, length: AnimationDuration);
+            var animation = new Animation(OnAnimationUpdate);
+            animatedControl.Animate(AnimationName, animation, length: AnimationDuration, finished: (a,b) => OnAnimationFinished());
         }
 
         void OnAnimationUpdate(double elapsedTimeDelta)
@@ -47,12 +47,12 @@ namespace MotoProto.Pages
 
         private void ScaleControl(double elapsedTimeDelta)
         {
-            animatedControl.Opacity = elapsedTimeDelta * 4;
+            animatedControl.Scale = elapsedTimeDelta * 4;
         }
 
         void OnAnimationFinished()
         {
-            Navigation.PushAsync(new GaragePage());
+            App.Current.MainPage = new NavigationPage(new GaragePage());
         }
     }
 }

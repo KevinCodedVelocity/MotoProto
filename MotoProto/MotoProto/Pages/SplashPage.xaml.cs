@@ -42,7 +42,18 @@ namespace MotoProto.Pages
 
         private void FadeInFadeOutControl(double elapsedTimeDelta)
         {
-            animatedControl.Opacity = elapsedTimeDelta;
+            // Fade in first half of animation
+            if (elapsedTimeDelta <= 0.5)
+            {
+                animatedControl.Opacity = elapsedTimeDelta * 2;
+            }
+
+            // Fade out second half of animation
+            else // elapsedTimeDelta > 0.5
+            {
+                var elapsedSecondHalfTime = elapsedTimeDelta - 0.5;
+                animatedControl.Opacity = 1.0 - elapsedSecondHalfTime * 2;
+            }
         }
 
         private void ScaleControl(double elapsedTimeDelta)
@@ -50,9 +61,10 @@ namespace MotoProto.Pages
             animatedControl.Scale = elapsedTimeDelta * 4;
         }
 
-        void OnAnimationFinished()
+        async void OnAnimationFinished()
         {
-            App.Current.MainPage = new NavigationPage(new GaragePage());
+            await Navigation.PushAsync(new GaragePage());
+            Navigation.RemovePage(this);
         }
     }
 }

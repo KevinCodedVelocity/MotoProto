@@ -13,7 +13,7 @@ namespace MotoProto.Pages
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new SplashPage();
+            App.Current.MainPage = new NavigationPage(new SplashPage());
         }
     }
 }

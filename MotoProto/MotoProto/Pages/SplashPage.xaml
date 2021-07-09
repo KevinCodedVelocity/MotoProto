@@ -10,8 +10,6 @@
                 HorizontalOptions="CenterAndExpand"
                 Text="SPLASH TEST"
                 VerticalOptions="CenterAndExpand" />
-
-            <Button Clicked="Button_Clicked" Text="GO!" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace MotoProto
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace MotoProto.Pages
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class AddVehiclePage : ContentPage
     {
-        public MainPage()
+        public AddVehiclePage()
         {
             InitializeComponent();
         }

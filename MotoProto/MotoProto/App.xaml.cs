@@ -1,6 +1,5 @@
-﻿using System;
+﻿using MotoProto.Pages;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace MotoProto
 {
@@ -10,7 +9,7 @@ namespace MotoProto
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new SplashPage());
         }
 
         protected override void OnStart()

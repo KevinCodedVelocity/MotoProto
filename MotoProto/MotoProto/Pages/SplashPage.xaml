@@ -3,15 +3,16 @@
     x:Class="MotoProto.Pages.SplashPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    NavigationPage.HasNavigationBar="False"
-    BackgroundColor="Black">
+    BackgroundColor="Black"
+    NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
             <Label
-                TextColor="LightGray"
                 x:Name="animatedControl"
+                FontSize="48"
                 HorizontalOptions="CenterAndExpand"
                 Text="MotoProto"
+                TextColor="LightGray"
                 VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>

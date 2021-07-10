@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +8,7 @@ namespace MotoProto.Pages
     public partial class SplashPage : ContentPage
     {
         const string AnimationName = "splash";
-        const int AnimationDuration = 2000; // MS
+        const int AnimationDuration = 3000; // MS
 
         public SplashPage()
         {
